@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cricket Scorer</string>
+
+    <string name="wicket_msg">Cannot take more wicket than 10!</string>
+</resources>
