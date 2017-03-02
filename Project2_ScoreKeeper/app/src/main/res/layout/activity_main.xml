@@ -1,337 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.bond.scorekeeper.MainActivity">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:onClick="resetScore"
-        android:text="Reset"
-        android:id="@+id/reset" />
-
-    <LinearLayout
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.bond.scorekeeper.MainActivity">
 
-        <!-- Left pane -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_gravity="center_vertical|center_horizontal">
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Team A"
-                android:textColor="#616161"
-                android:textSize="14sp" />
-
+            <!-- Left pane -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal">
 
                 <TextView
-                    android:id="@+id/title_team_a_score"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:text="Runs"
-                    android:textColor="#000000"
-                    android:textSize="8sp" />
+                    android:padding="16dp"
+                    android:text="Team A"
+                    android:textColor="#616161"
+                    android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/title_team_a_wickets"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="Wickets"
-                    android:textColor="#000000"
-                    android:textSize="8sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title_team_a_score"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Runs"
+                        android:textColor="#000000"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/title_team_a_wickets"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Wickets"
+                        android:textColor="#000000"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_wickets"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="32sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/team_a_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addThreeForTeamA"
+                        android:text="+1" />
+
+                    <Button
+                        android:id="@+id/team_a_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addTwoForTeamA"
+                        android:text="+2" />
+
+                    <Button
+                        android:id="@+id/team_a_3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addOneForTeamA"
+                        android:text="+3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/team_a_4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addThreeForTeamA"
+                        android:text="+4" />
+
+                    <Button
+                        android:id="@+id/team_a_5"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addTwoForTeamA"
+                        android:text="+5" />
+
+                    <Button
+                        android:id="@+id/team_a_6"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addOneForTeamA"
+                        android:text="+6" />
+                </LinearLayout>
+
+                <Button
+                    android:text="Wicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/team_a_wicket_btn" />
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/team_a_score"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="32sp" />
-
-                <TextView
-                    android:id="@+id/team_a_wickets"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="32sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <View
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
 
-                <Button
-                    android:id="@+id/team_a_1"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addThreeForTeamA"
-                    android:text="+1" />
-
-                <Button
-                    android:id="@+id/team_a_2"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addTwoForTeamA"
-                    android:text="+2" />
-
-                <Button
-                    android:id="@+id/team_a_3"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addOneForTeamA"
-                    android:text="+3" />
-            </LinearLayout>
-
+            <!-- Right pane -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/team_a_4"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addThreeForTeamA"
-                    android:text="+4" />
-
-                <Button
-                    android:id="@+id/team_a_5"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addTwoForTeamA"
-                    android:text="+5" />
-
-                <Button
-                    android:id="@+id/team_a_6"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addOneForTeamA"
-                    android:text="+6" />
-            </LinearLayout>
-
-            <Button
-                android:text="Wicket"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/team_a_wicket_btn" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Team B"
+                    android:textColor="#616161"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title_team_b_score"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Runs"
+                        android:textColor="#000000"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/title_team_b_wickets"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Wickets"
+                        android:textColor="#000000"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_wickets"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="32sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/team_b_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addThreeForTeamA"
+                        android:text="+1" />
+
+                    <Button
+                        android:id="@+id/team_b_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addTwoForTeamA"
+                        android:text="+2" />
+
+                    <Button
+                        android:id="@+id/team_b_3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addOneForTeamA"
+                        android:text="+3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/team_b_4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addThreeForTeamA"
+                        android:text="+4" />
+
+                    <Button
+                        android:id="@+id/team_b_5"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addTwoForTeamA"
+                        android:text="+5" />
+
+                    <Button
+                        android:id="@+id/team_b_6"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="addOneForTeamA"
+                        android:text="+6" />
+                </LinearLayout>
+
+                <Button
+                    android:text="Wicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/team_b_wicket_btn" />
+            </LinearLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray" />
-
-        <!-- Right pane -->
-        <LinearLayout
-            android:layout_width="0dp"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:layout_below="@id/content"
+            android:layout_marginTop="32dp"
+            android:onClick="resetScore"
+            android:text="Reset"
+            android:id="@+id/reset" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Team B"
-                android:textColor="#616161"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/title_team_b_score"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="Runs"
-                    android:textColor="#000000"
-                    android:textSize="8sp" />
-
-                <TextView
-                    android:id="@+id/title_team_b_wickets"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="Wickets"
-                    android:textColor="#000000"
-                    android:textSize="8sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/team_b_score"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="32sp" />
-
-                <TextView
-                    android:id="@+id/team_b_wickets"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="32sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/team_b_1"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addThreeForTeamA"
-                    android:text="+1" />
-
-                <Button
-                    android:id="@+id/team_b_2"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addTwoForTeamA"
-                    android:text="+2" />
-
-                <Button
-                    android:id="@+id/team_b_3"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addOneForTeamA"
-                    android:text="+3" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/team_b_4"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addThreeForTeamA"
-                    android:text="+4" />
-
-                <Button
-                    android:id="@+id/team_b_5"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addTwoForTeamA"
-                    android:text="+5" />
-
-                <Button
-                    android:id="@+id/team_b_6"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:onClick="addOneForTeamA"
-                    android:text="+6" />
-            </LinearLayout>
-
-            <Button
-                android:text="Wicket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/team_b_wicket_btn" />
-        </LinearLayout>
-
-
-    </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
