@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">C QuizApp</string>
+
+    <!-- Question Strings -->
+    <string name="ques_1">Q.1 Any C program will contain which of the following function?</string>
+    <string name="ques_2">Q.2 "?:" is which kind of operator? </string>
+    <string name="ques_3">Q.3 Select functions available in library math.h? </string>
+    <string name="ques_4">Q.4 Which header must be included to use the printf function? </string>
+
+    <!-- Options strings -->
+    <string name="ques_1_A">main</string>
+    <string name="ques_1_B">add</string>
+    <string name="ques_1_C">del</string>
+    <string name="ques_1_D">return</string>
+
+    <string name="ques_2_A">Tertiary</string>
+    <string name="ques_2_B">Binary</string>
+    <string name="ques_2_C">Unary</string>
+    <string name="ques_2_D">Question</string>
+
+    <string name="ques_3_A">sin</string>
+    <string name="ques_3_B">cos</string>
+    <string name="ques_3_C">sqrt</string>
+    <string name="ques_3_D">printf</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="score">Score</string>
+    <string name="ok">Ok</string>
+</resources>
