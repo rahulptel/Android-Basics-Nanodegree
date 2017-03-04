@@ -98,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
                 // If there is a network connection, fetch data
                 if (networkInfo != null && networkInfo.isConnected()) {
+            		// Clear the current content
+                    mAdapter.clear();
+                    // Hide the empty state text view
+                    mEmptyStateTextView.setVisibility(View.GONE);
+
                     // Show the loading indicator while new data is being fetched
                     View loadingIndicator = findViewById(R.id.progressBar);
                     loadingIndicator.setVisibility(View.VISIBLE);
