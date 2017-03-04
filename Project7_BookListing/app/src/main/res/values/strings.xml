@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Book Listing App</string>
+
+    <string name="submit">Search</string>
+    <string name="dummy_title">Random</string>
+    <string name="dummy_author">This is Random Too</string>
+
+    <string name="query">q</string>
+    <string name="max_results">maxResults</string>
+    <string name="empty_view_text">No books found on the given topic!</string>
+    <string name="no_internet_connection">Please check your internet connection!</string>
+
+</resources>
