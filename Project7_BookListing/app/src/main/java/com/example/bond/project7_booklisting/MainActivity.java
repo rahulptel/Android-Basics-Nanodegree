@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         // so the list can be populated in the user interface
         bookListView.setAdapter(mAdapter);
 
-        // Get a reference to the ConnectivityManager to check state of network connectivity
-        ConnectivityManager connMgr = (ConnectivityManager)
+        // Get reference to the ConnectivityManager to check state of network connectivity
+        final ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
 
         // Get details on the currently active default data network
@@ -93,14 +93,23 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText search_book = (EditText) findViewById(R.id.search_book);
-                if(TextUtils.isEmpty(search_book.getText().toString().trim())){
-                    // If the search is on empty text
-                    mEmptyStateTextView.setText(R.string.empty_view_text);
-                } else {
-                    getLoaderManager().restartLoader(BOOK_LOADER, null, MainActivity.this);
-                }
+                // Get details on the currently active default data network
+                NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
+                // If there is a network connection, fetch data
+                if (networkInfo != null && networkInfo.isConnected()) {
+                    // Show the loading indicator while new data is being fetched
+                    View loadingIndicator = findViewById(R.id.progressBar);
+                    loadingIndicator.setVisibility(View.VISIBLE);
+
+                    EditText search_book = (EditText) findViewById(R.id.search_book);
+                    if(TextUtils.isEmpty(search_book.getText().toString().trim())){
+                        // If the search is on empty text
+                        mEmptyStateTextView.setText(R.string.empty_view_text);
+                    } else {
+                        getLoaderManager().restartLoader(BOOK_LOADER, null, MainActivity.this);
+                    }
+                }
             }
         });
     }
