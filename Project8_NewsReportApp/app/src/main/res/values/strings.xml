@@ -3,7 +3,13 @@
 
     <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
     <string name="no_internet_connection">No internet connection.</string>
+    <string name="no_books_found">No books found on the given topic!</string>
 
+    <!-- Query parts -->
+    <string name="query_order_by">order-by</string>
+    <string name="query_q">q</string>
+    <string name="query_api_key">api-key</string>
+    <string name="query_api_key_value">test</string>
 
     <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
     <string name="settings_menu_item">Settings</string>

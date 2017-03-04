@@ -37,6 +37,8 @@ public class NewsActivity extends AppCompatActivity
      */
     private static final int NEWS_LOADER_ID = 1;
 
+    private boolean no_internet_on_pref_change = false;
+
     /** Adapter for the list of news */
     private NewsAdapter mAdapter;
 
@@ -147,10 +149,10 @@ public class NewsActivity extends AppCompatActivity
         Uri baseUri = Uri.parse(NEWS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
-
-        uriBuilder.appendQueryParameter("order-by", orderBy);
-        uriBuilder.appendQueryParameter("q", topic);
-        uriBuilder.appendQueryParameter("api-key", "test");
+        // Build the uri to query
+        uriBuilder.appendQueryParameter(getString(R.string.query_order_by), orderBy);
+        uriBuilder.appendQueryParameter(getString(R.string.query_q), topic);
+        uriBuilder.appendQueryParameter(getString(R.string.query_api_key), getString(R.string.query_api_key_value));
 
         //Log.d("test-news", NEWS_REQUEST_URL);
 
@@ -163,16 +165,18 @@ public class NewsActivity extends AppCompatActivity
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
-        // Set empty state text to display "No earthquakes found."
-        mEmptyStateTextView.setText("No news on the topic");
+        if(no_internet_on_pref_change == false){
+            // Set empty state text to display "No earthquakes found."
+            mEmptyStateTextView.setText(getText(R.string.no_books_found));
 
-        // Clear the adapter of previous news data
-        mAdapter.clear();
+            // Clear the adapter of previous news data
+            mAdapter.clear();
 
-        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
-        // data set. This will trigger the ListView to update.
-        if (news != null && !news.isEmpty()) {
-            mAdapter.addAll(news);
+            // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+            // data set. This will trigger the ListView to update.
+            if (news != null && !news.isEmpty()) {
+                mAdapter.addAll(news);
+            }
         }
     }
 
@@ -189,15 +193,39 @@ public class NewsActivity extends AppCompatActivity
             // Clear the ListView as a new query will be kicked off
             mAdapter.clear();
 
-            // Hide the empty state text view as the loading indicator will be displayed
-            mEmptyStateTextView.setVisibility(View.GONE);
+            // Get a reference to the ConnectivityManager to check state of network connectivity
+            ConnectivityManager connMgr = (ConnectivityManager)
+                    getSystemService(Context.CONNECTIVITY_SERVICE);
 
-            // Show the loading indicator while new data is being fetched
-            View loadingIndicator = findViewById(R.id.loading_indicator);
-            loadingIndicator.setVisibility(View.VISIBLE);
+            // Get details on the currently active default data network
+            NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
-            // Restart the loader to requery the Guardian as the query settings have been updated
-            getLoaderManager().restartLoader(NEWS_LOADER_ID, null, this);
+            // If there is a network connection, fetch data
+            if (networkInfo != null && networkInfo.isConnected()) {
+                // Set flag
+                no_internet_on_pref_change = false;
+                // Hide the empty state text view as the loading indicator will be displayed
+                mEmptyStateTextView.setVisibility(View.GONE);
+
+                // Show the loading indicator while new data is being fetched
+                View loadingIndicator = findViewById(R.id.loading_indicator);
+                loadingIndicator.setVisibility(View.VISIBLE);
+
+                // Restart the loader to requery the Guardian as the query settings have been updated
+                getLoaderManager().restartLoader(NEWS_LOADER_ID, null, this);
+            } else {
+
+                // Set flag
+                no_internet_on_pref_change = true;
+
+                // Otherwise, display error
+                // First, hide loading indicator so error message will be visible
+                View loadingIndicator = findViewById(R.id.loading_indicator);
+                loadingIndicator.setVisibility(View.GONE);
+
+                // Update empty state with no connection error message
+                mEmptyStateTextView.setText(R.string.no_internet_connection);
+            }
         }
     }
 }
