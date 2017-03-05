@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Inventory Manager</string>
+
+    <string name="empty_view_title">No items</string>
+    <string name="empty_view_subtitle">Add an item to get started</string>
+
+    <!-- Strings for adding a product-->
+    <!-- Titles -->
+    <string name="product_name_title">Product Name</string>
+    <string name="quantity_title">Quantity</string>
+    <string name="price_title">Price</string>
+    <string name="supplier_email_title">Supplier E-mail Address</string>
+    <string name="supplier_phone_title">Supplier Phone</string>
+    <string name="supplier_name_title">Supplier Name</string>
+    <string name="image_title">Product Image</string>
+    <string name="pick_image">Pick image</string>
+
+    <!-- Hints -->
+    <string name="supplier_phone_hint">+91 9974321890</string>
+    <string name="supplier_name_hint">Avani motors</string>
+    <string name="supplier_email_hint">john.doe@gmail.com</string>
+
+    <!-- Editor activity titles-->
+    <string name="editor_activity_title_new_item">Add new item</string>
+    <string name="editor_activity_title_edit_item">Edit item</string>
+
+    <!-- Menu -->
+    <string name="action_save">Save item</string>
+    <string name="action_delete">Delete item</string>
+    <string name="menu_delete_item">Delete item</string>
+
+    <!-- Dialog messages -->
+    <string name="delete_dialog_msg">Are you sure you want to procede with the deletion?</string>
+    <string name="delete">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="unsaved_changes_dialog_msg">There are unsaved changes in the product information. Do you want to continue?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep editing</string>
+
+    <!-- Toast message strings -->
+    <string name="toast_unable_to_read_image">Unable to read image!</string>
+    <string name="toast_insert_item_success">Item added successfully!</string>
+    <string name="toast_insert_item_fail">Error inserting the item!</string>
+    <string name="toast_update_item_success">Item updated successfully!</string>
+    <string name="toast_update_item_fail">Error updating the item!</string>
+    <string name="toast_delete_item_success">Item delete successfully!</string>
+    <string name="toast_delete_item_fail">Error deleting the item!</string>
+    
+</resources>
