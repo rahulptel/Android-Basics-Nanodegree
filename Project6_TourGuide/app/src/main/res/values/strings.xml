@@ -1,0 +1,68 @@
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Ahmedabad University</string>
+
+    <!-- Category name for Schools [CHAR LIMIT=20] -->
+    <string name="category_phrases">Schools</string>
+
+    <!-- Category name for Centers [CHAR LIMIT=20] -->
+    <string name="category_colors">Centers</string>
+
+    <!-- Category name for News [CHAR LIMIT=20] -->
+    <string name="category_numbers">News</string>
+
+    <!-- Category name for Events [CHAR LIMIT=20] -->
+    <string name="category_family">Events</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    
+    <!-- School names -->
+    <string name="name_amsom">Amrut Modi School of Management</string>
+    <string name="name_scs">School of Computer Studies</string>
+    <string name="name_aas">School of Arts and Sciences</string>
+    <string name="name_seas">School of Engineering and Applied Science</string>
+
+    <!-- School address -->
+    <string name="address_amsom">Ahmedabad University GICT Building, Central Campus,
+    Navrangpura, Ahmedabad – 380009
+    Gujarat, INDIA.
+    </string>
+    <string name="address_seas">Ahmedabad University GICT Building, Central Campus,
+    Navrangpura, Ahmedabad – 380009
+    Gujarat, INDIA.
+    </string>
+    <string name="address_scs">Ahmedabad University, A.G. CAMPUS, POST BOX NO. 4206
+NAVRANGPURA,AHMEDABAD - 380 009, GUJARAT - INDIA
+    </string>
+
+    <string name="address_aas">
+    Ahmedabad University
+    Central Campus,
+    Navrangpura, Ahmedabad – 380009
+    Gujarat, INDIA
+    </string>
+
+
+    <string name="email_amsom">Email: amsom@ahduni.edu.in</string>
+    <string name="email_aas">Email: sas@ahduni.edu.in</string>
+    <string name="email_scs">Email: scs@ahduni.edu.in</string>
+    <string name="email_seas">Email: seas@ahduni.edu.in</string>
+
+    <!-- Center names -->
+    <string name="center_hm">Center for Heritage Management</string>
+    <string name="center_vs">Venture Studio</string>
+    <string name="center_lf">Center for learning futures</string>
+
+    <string name="email_hm">Email: info.chm@ahduni.edu.in</string>
+    <string name="email_vs">Email: vs@ahduni.edu.in</string>
+    <string name="email_lf">Email: cl@ahduni.edu.in</string>
+    <!-- News -->
+    
+    <!-- Events -->
+    <string name="event_1">International Conference on Heritage Management Education and Practice</string>
+    <string name="event_2">Cytometry Workshop at Division of Biological and Life Sciences</string>
+    <string name="event_3">Infosys Co-Founder Kris Gopalakrishnan Delivers the Foundation Day Lecture</string>
+    <string name="event_4">Whither The idea of University: A Faltering Project of Excellence, Civility and Culture</string>
+</resources>
