@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HabitTracker</string>
+
+    <string name="dummy_run_1">1</string>
+    <string name="dummy_run_2">5</string>
+
+    <string name="dummy_comment_1">Phew! It was tiring...</string>
+    <string name="dummy_comment_2">Feeling excited!</string>
+</resources>
