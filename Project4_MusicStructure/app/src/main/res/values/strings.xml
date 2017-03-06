@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MusicStructure</string>
+
+    <string name="now_artist">Artist</string>
+    <string name="now_genre">Genre</string>
+    <string name="now_search">Search</string>
+
+    <string name="btn_find">Find</string>
+    <string name="search_hint">Shape of you</string>
+    <string name="now_playing_title">Now Playing</string>
+    <string name="now_playing_value">Ae Dil Hai Mushkil - Arijit Singh</string>
+
+    <string name="title_artist">Music App - By Artist</string>
+    <string name="title_genre">Music App - By Genre </string>
+    <string name="title_playlist">Music App - Search</string>
+
+    <string name="artist_help">This page displays list of songs sorted by artist.
+        For this task we well use the apis of Free Music Archive (https://freemusicarchive.org/api)</string>
+    <string name="genre_help">This page displays list of songs sorted by genre.
+    For this task we well use the apis of Free Music Archive (https://freemusicarchive.org/api)</string>
+    <string name="playlist_help">This page allows you to search artists, albums, and track names.
+    For this task we well use the apis of Free Music Archive (https://freemusicarchive.org/api)</string>
+</resources>
