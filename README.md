@@ -14,7 +14,7 @@ It consisted of the following five courses:
 
 The projects were based on the content covered in these courses.
 
-### List of projects
+## List of projects
 
 1. A Single Screen App
 2. Score Keeper App
@@ -26,3 +26,7 @@ The projects were based on the content covered in these courses.
 8. News App
 9. Habit Tracker App
 10. Inventory App
+
+## Certificate
+
+![certificate](/certificate.pdf)
