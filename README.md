@@ -12,4 +12,17 @@ It consisted of the following five courses:
 * [Android Basics: Networking](https://www.udacity.com/course/android-basics-networking--ud843)
 * [Android Basics: Data Storage](https://www.udacity.com/course/android-basics-data-storage--ud845)
 
-The projects were based on the content covered in the following courses.
+The projects were based on the content covered in these courses.
+
+### List of projects
+
+1. A Single Screen App
+2. Score Keeper App
+3. Quiz App
+4. Music Structure App
+5. Repord Card
+6. Tour Guide App
+7. Book Listing App
+8. News App
+9. Habit Tracker App
+10. Inventory App
