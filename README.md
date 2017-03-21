@@ -29,4 +29,4 @@ The projects were based on the content covered in these courses.
 
 ## Certificate
 
-![certificate](/certificate.pdf)
+![certificate](/android-basics-certificate.jpg)
